@@ -1,4 +1,4 @@
-<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide modal fade">
+<div id="sign-in-dialog" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -49,9 +49,3 @@
 	</div>
 	<!--form -->
 </div>
-
-<script type="text/javascript">
-	$(window).on('load', function() {
-		$('#sign-in-dialog').modal('show');
-	});
-</script>
