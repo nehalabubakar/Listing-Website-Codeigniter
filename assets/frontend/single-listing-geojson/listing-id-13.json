@@ -1,0 +1,34 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "77.6843",
+                    "12.8245"
+                ]
+            },
+            "properties": {
+                "id": "dabb11572eec16eb177f80237bb56ddc",
+                "index": 0,
+                "isActive": true,
+                "logo": "04a6194236d93430be1352e7310424a3.jpg",
+                "image": "04a6194236d93430be1352e7310424a3.jpg",
+                "link": "http://localhost/client/find-mart/general/pizza-hut/13",
+                "url": "Www.pizzahut.com ",
+                "name": "Pizza hut",
+                "category": "general",
+                "email": "pizzahut@mail.com",
+                "stars": "0.0",
+                "phone": "7619568614",
+                "address": "Near Gandi road",
+                "about": "about",
+                "tags": [
+                    ""
+                ]
+            }
+        }
+    ]
+}

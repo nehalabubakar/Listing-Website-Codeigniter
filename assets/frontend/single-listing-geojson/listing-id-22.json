@@ -1,0 +1,34 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "77.5946",
+                    "12.9716"
+                ]
+            },
+            "properties": {
+                "id": "ecab9e830ffb32d142a80af6719aa700",
+                "index": 0,
+                "isActive": true,
+                "logo": "90cf74c111e9136947685600ee80559f.jpg",
+                "image": "90cf74c111e9136947685600ee80559f.jpg",
+                "link": "http://localhost/fimart/beauty/hair-magic/22",
+                "url": "www.hairmagic.com",
+                "name": "Hair Magic",
+                "category": "beauty",
+                "email": "hairmagic@gmail.com",
+                "stars": "0.0",
+                "phone": "08352262770",
+                "address": "near ladies hostel",
+                "about": "about",
+                "tags": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
