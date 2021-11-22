@@ -1,10 +1,7 @@
-<div id="sign-in-dialog" class="modal fade">
-	<div class="modal-dialog">
+<div id="sign-in-dialog-nehal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
-			<div class="modal-header">
-				<h3 class="modal-title">Sign In</h3>
-			</div>
-			<div class="modal-body">
+			<div class="modal-body p-4">
 				<form action="<?php echo site_url('login/validate_login'); ?>" method="post">
 					<div class="sign-in-wrapper">
 						<a href="#0" class="social_bt facebook">Login with Facebook</a>
@@ -13,12 +10,12 @@
 						<div class="form-group">
 							<label>Email</label>
 							<input type="email" class="form-control" name="email" id="email">
-							<i class="icon_mail_alt"></i>
+							<!-- <i class="icon_mail_alt"></i> -->
 						</div>
 						<div class="form-group">
 							<label>Password</label>
 							<input type="password" class="form-control" name="password" id="password" value="">
-							<i class="icon_lock_alt"></i>
+							<!-- <i class="icon_lock_alt"></i> -->
 						</div>
 						<div class="clearfix add_bottom_15">
 							<div class="checkboxes float-left">
@@ -47,5 +44,4 @@
 			</div>
 		</div>
 	</div>
-	<!--form -->
 </div>

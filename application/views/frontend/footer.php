@@ -102,12 +102,13 @@
 
 			}
 		});
+	}
 
-		$(window).on('load', function() {
-			jQuery('#sign-in-dialog').modal('show', {
+	$(function() {
+		setTimeout(function() {
+			jQuery('#sign-in-dialog-nehal').modal('show', {
 				backdrop: 'true'
 			});
-			alert('Hello Nehal');
-		});
-	}
+		}, 5000);
+	});
 </script>

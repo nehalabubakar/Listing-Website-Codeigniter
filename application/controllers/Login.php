@@ -33,9 +33,11 @@ class Login extends CI_Controller
         $email = sanitizer($this->input->post('email'));
         $password = sanitizer($this->input->post('password'));
         $credential = array('email' => $email, 'password' => sha1($password), 'is_verified' => 1);
+        // echo sha1($password);
 
         // Checking login credential for admin
         $query = $this->db->get_where('user', $credential);
+        // print_r($query);
 
         if ($query->num_rows() > 0) {
             $row = $query->row();

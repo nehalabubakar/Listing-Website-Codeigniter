@@ -103,8 +103,6 @@
 		?>
 	</div>
 
-	<!-- Signin popup -->
-	<?php include 'signin_popup.php'; ?>
 
 	<!-- Back to top button -->
 	<div id="toTop"></div>
@@ -114,6 +112,14 @@
 
 	<!--modal-->
 	<?php include 'modal.php'; ?>
+
+	<!-- Signin popup -->
+	<?php
+	if ($page_name == 'listings') :
+		include 'signin_popup.php';
+	endif;
+	?>
+
 	<?php
 	if (get_frontend_settings('cookie_status') == 1) :
 		include 'eu-cookie.php';
