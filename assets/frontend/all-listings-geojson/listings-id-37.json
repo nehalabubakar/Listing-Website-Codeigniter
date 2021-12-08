@@ -6,42 +6,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "0",
-                    "0"
-                ]
-            },
-            "properties": {
-                "id": "817321cac3ff7b8f1d9a1b422dbbb816",
-                "index": 0,
-                "isActive": true,
-                "logo": "ec47db6f6bd5b5ade7f1e0678193b4da.jpg",
-                "image": "ec47db6f6bd5b5ade7f1e0678193b4da.jpg",
-                "link": "http://localhost/client/find-mart/hotel/j-k-hotel/12",
-                "url": "",
-                "name": "J K Hotel",
-                "category": "hotel",
-                "email": "rakeshkodate12345@gmail.com",
-                "stars": "0.0",
-                "phone": "9874563211",
-                "address": "J K Footware",
-                "about": "about",
-                "tags": [
-                    ""
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
                     "77.6843",
                     "12.8245"
                 ]
             },
             "properties": {
                 "id": "dabb11572eec16eb177f80237bb56ddc",
-                "index": 1,
+                "index": 0,
                 "isActive": true,
                 "logo": "04a6194236d93430be1352e7310424a3.jpg",
                 "image": "04a6194236d93430be1352e7310424a3.jpg",
@@ -70,7 +41,7 @@
             },
             "properties": {
                 "id": "ecab9e830ffb32d142a80af6719aa700",
-                "index": 2,
+                "index": 1,
                 "isActive": true,
                 "logo": "90cf74c111e9136947685600ee80559f.jpg",
                 "image": "90cf74c111e9136947685600ee80559f.jpg",
@@ -79,7 +50,7 @@
                 "name": "Hair Magic",
                 "category": "beauty",
                 "email": "hairmagic@gmail.com",
-                "stars": "0.0",
+                "stars": "1.8",
                 "phone": "08352262770",
                 "address": "near ladies hostel",
                 "about": "about",

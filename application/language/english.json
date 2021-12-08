@@ -721,5 +721,7 @@
     "please_check_your_phone_for_otp_verification": "Please check your phone for otp verification",
     "request_approved_successfully": "Request approved successfully",
     "approved": "Approved",
-    "all_cities": "All cities"
+    "all_cities": "All cities",
+    "get_badge": "Get badge",
+    "review_updated_successfully": "Review updated successfully"
 }

@@ -115,9 +115,11 @@
 
 	<!-- Signin popup -->
 	<?php
-	if ($page_name == 'listings') :
-		include 'signin_popup.php';
-	endif;
+	if ($this->session->userdata('is_logged_in') != 1) {
+		if ($page_name == 'listings' || $page_name == 'directory_listing') :
+			include 'signin_popup.php';
+		endif;
+	}
 	?>
 
 	<?php

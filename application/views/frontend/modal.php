@@ -57,7 +57,6 @@
                 <h4 class="modal-title" style="text-align:center;">Are you sure to delete this information ?</h4>
             </div>
 
-
             <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
                 <a href="#" class="btn btn-danger" id="delete_link"><?php echo get_phrase('delete'); ?></a>
                 <button type="button" class="btn btn-info" data-dismiss="modal"><?php echo get_phrase('cancel'); ?></button>

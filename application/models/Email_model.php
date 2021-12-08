@@ -99,6 +99,23 @@ class Email_model extends CI_Model
 		send_sms($message, $this->db->get_where('user', array('id' => $booking['requester_id']))->row('phone'));
 	}
 
+	public function make_listing_active_email($listing_id = "")
+	{
+		$listing = $this->db->get_where('listing', array('id' => $listing_id))->row_array();
+		$email_msg = '<b>Congratulations ! </b>';
+		$email_msg .= '<p>' . $listing['name'] . '</p>';
+		$email_msg .= '<p>Your listing has been approved.</p>';
+		$email_msg .= '<p>You can now start listing your services.</p>';
+		$subject = 'Approved your listing';
+		$to		 = $this->db->get_where('user', array('id' => $listing['user_id']))->row('email');
+		$from	 = $this->db->get_where('user', array('id' => $listing['user_id']))->row('email');
+
+		$this->send_smtp_mail($email_msg, $subject, $to, $from);
+		//$this->sent_smtp_mail_with_php_mailer_library($email_msg, $subject, $to, $from);
+		$message = 'Congratulations! ' . $listing['name'] . 'Your listing has been approved You can now start listing your services.';
+		send_sms($message, $this->db->get_where('user', array('id' => $listing['user_id']))->row('phone'));
+	}
+
 	public function contact_us_mail($data = "")
 	{
 		$subject 		= "Contact us";

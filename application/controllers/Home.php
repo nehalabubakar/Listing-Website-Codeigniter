@@ -289,6 +289,20 @@ class Home extends CI_Controller
         $this->load->view('frontend/index', $page_data);
     }
 
+    // Get single listing data
+    public function listing_data()
+    {
+        $listing_id = $this->uri->segment('3');
+        $listing_details = $this->db->select('listing.name, listing.listing_cover')
+            ->where('listing.id', $listing_id)
+            ->get('listing')
+            ->row_array();
+        $listing_rating = $this->frontend_model->get_listing_wise_rating($listing_id);
+        $listing_reviews_count = $this->frontend_model->get_listing_wise_review($listing_id);
+
+        echo 'const div = document.createElement("div"); div.id = "findMartBadge"; div.innerHTML = "<a href=\"' . base_url() . '\" target=\"_blank\"><div id=\"badgeBackground\" style =\"background: url(' . base_url() . 'mobile/uploads/listing_cover_photo/' . $listing_details['listing_cover'] . '); display:inline-block; width:300px; height:250px; margin:5px; position:relative; background-position: 50% 50% !important; box-shadow: inset 0 -74px 32px -11px rgba(0, 0, 0, 0.6);\"><div id=\"listedOn\" style=\"background: #fff; width: 70%; margin:5%; padding: 0 0 0 2%; border-radius: 3px; font-size: 13px; font-family:\'Roboto\', sans-serif; line-height:1.4; display: flex; align-items: center; justify-content: space-between;\"><span style=\"color: #747474; width: 75px\">Listed on </span><img src=\"' . base_url('assets/global/dark_logo.png') . '\" alt=\"Find Mart Logo\" style=\"width: 140px;\"></div><div class=\"listingDetails\" style=\"position:absolute; bottom:0;\"><span id=\"listingName\" class=\"listingName\" style=\"float: left; display: block; padding:5px 10px; width:90%; color: #fff; font-family:\'Roboto\', sans-serif; font-size:20px; line-height:1.4; font-weight: bold;\">' . $listing_details['name'] . '</span><div style=\"padding:0 10px; float:left; width: 200px; margin-bottom: 7px;\"><span id=\"listingRating\" style=\"float: left; background: #259107; color: #fff; padding: 2px 3px; border-radius: 3px; font-size: 18px; margin:1px 4px 0 0;\">' . $listing_rating . '</span><span id=\"ratingCount\" class=\"rating_count\" style=\"display: block; padding: 5px 10px; width: 90%; color: #fff; font-family:\'Roboto\',sans-serif; font-size: 13px; line-height:1.4;\">(' . count($listing_reviews_count) . ' Reviews)</span></div></div></div></a>"; document.getElementById("badge").appendChild(div);';
+    }
+
     function category()
     {
         $page_data['categories']    =   $this->frontend_model->get_parent_categories()->result_array();
